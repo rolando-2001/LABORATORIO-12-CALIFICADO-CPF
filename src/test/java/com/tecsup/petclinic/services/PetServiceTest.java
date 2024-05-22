@@ -52,11 +52,11 @@ public class PetServiceTest {
     @Test
     public void testFindPetByName() {
 
-        String FIND_NAME = "Leo";
+        String FIND_NAME = "George";
         int SIZE_EXPECTED = 1;
 
         List<Pet> pets = this.petService.findByName(FIND_NAME);
-
+        System.out.println(pets);
         assertEquals(SIZE_EXPECTED, pets.size());
     }
 
