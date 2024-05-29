@@ -13,4 +13,8 @@ public interface OwnerRepository extends JpaRepository<Owners,Integer> {
 
 
      List<Owners> findById(int id);
+
+     @Override
+     List<Owners> findAll();
+
 }

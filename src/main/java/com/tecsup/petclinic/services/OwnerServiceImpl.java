@@ -29,4 +29,29 @@ public class OwnerServiceImpl implements OwnerService{
 
         return owners;
     }
+
+    @Override
+    public List<Owners> findById(int id) {
+        List<Owners> owners=ownerRepository.findById(id);
+        owners.stream().forEach(owners1 -> log.info(""+owners1));
+        return owners;
+    }
+
+    @Override
+    public Owners update(Owners owners) {
+
+        return ownerRepository.save(owners);
+    }
+
+    @Override
+    public void delete(Integer id) {
+         ownerRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Owners> findALl() {
+        return ownerRepository.findAll();
+    }
+
+
 }

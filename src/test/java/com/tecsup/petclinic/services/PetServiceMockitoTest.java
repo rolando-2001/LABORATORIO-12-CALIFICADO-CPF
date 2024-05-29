@@ -57,6 +57,7 @@ public class PetServiceMockitoTest {
         log.info("" + petExpected);
         assertEquals(petExpected.getName(), petExpected.getName());
 
+
     }
 
     /**
@@ -86,7 +87,7 @@ public class PetServiceMockitoTest {
         int TYPE_ID = 5;
 
         List<Pet> petsExpected = TObjectCreator.getPetsForFindByTypeId();
-
+        System.out.println(petsExpected);
         Mockito.when(this.repository.findByTypeId(TYPE_ID))
                 .thenReturn(petsExpected);
 

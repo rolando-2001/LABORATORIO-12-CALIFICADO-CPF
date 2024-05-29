@@ -70,7 +70,7 @@ public class PetServiceTest {
         int SIZE_EXPECTED = 2;
 
         List<Pet> pets = this.petService.findByTypeId(TYPE_ID);
-
+        System.out.println(pets);
         assertEquals(SIZE_EXPECTED, pets.size());
     }
 
